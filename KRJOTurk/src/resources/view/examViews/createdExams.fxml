@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.createdExams">
+   <children>
+      <HBox prefHeight="45.0" prefWidth="800.0">
+         <children>
+            <Button fx:id="createdExamsButton" maxHeight="100.0" maxWidth="1000.0" minWidth="300.0" mnemonicParsing="false" onAction="#createdExamsButtonClicked" prefWidth="300.0" text="Created exams" HBox.hgrow="ALWAYS" />
+            <Button fx:id="createNewExamButton" maxHeight="100.0" maxWidth="1000.0" minWidth="300.0" mnemonicParsing="false" onAction="#createNewExamButtonClicked" prefWidth="300.0" text="Create new exam" HBox.hgrow="ALWAYS" />
+         </children>
+      </HBox>
+      <ListView fx:id="examsListView" fixedCellSize="45.0" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS" />
+   </children>
+</VBox>

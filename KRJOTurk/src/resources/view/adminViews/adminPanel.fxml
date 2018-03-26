@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="adminPanAddApp">
+   <children>
+      <HBox prefHeight="45.0" prefWidth="800.0">
+         <children>
+            <Button fx:id="addAppButton" maxHeight="100.0" maxWidth="500.0" mnemonicParsing="false" onAction="#addAppClicked" prefWidth="200.0" text="Add Application" HBox.hgrow="ALWAYS" />
+            <Button fx:id="editAppButton" maxHeight="100.0" maxWidth="500.0" mnemonicParsing="false" onAction="#editAppClicked" prefWidth="200.0" text="Edit Application" HBox.hgrow="ALWAYS" />
+            <Button fx:id="addCategoryButton" layoutX="314.0" layoutY="10.0" maxHeight="100.0" maxWidth="500.0" mnemonicParsing="false" onAction="#addCategoryClicked" prefWidth="200.0" text="Add Category" HBox.hgrow="ALWAYS" />
+            <Button fx:id="editCategoryButton" layoutX="10.0" layoutY="10.0" maxHeight="100.0" maxWidth="500.0" mnemonicParsing="false" onAction="#editCategoryClicked" prefWidth="200.0" text="Edit Category" HBox.hgrow="ALWAYS" />
+         </children>
+      </HBox>
+      <HBox maxHeight="1000.0" prefHeight="555.0" prefWidth="200.0" />
+   </children>
+</VBox>

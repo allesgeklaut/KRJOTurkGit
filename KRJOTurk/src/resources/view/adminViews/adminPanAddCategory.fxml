@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.adminPanAddCategory">
+   <children>
+      <HBox prefHeight="45.0" prefWidth="800.0">
+         <children>
+            <Button fx:id="addAppButton" maxHeight="100.0" maxWidth="500.0" mnemonicParsing="false" onAction="#addAppClicked" prefWidth="200.0" text="Add Application" HBox.hgrow="ALWAYS" />
+            <Button fx:id="editAppButton" maxHeight="100.0" maxWidth="500.0" mnemonicParsing="false" onAction="#editAppClicked" prefWidth="200.0" text="Edit Application" HBox.hgrow="ALWAYS" />
+            <Button fx:id="addCategoryButton" layoutX="314.0" layoutY="10.0" maxHeight="100.0" maxWidth="500.0" mnemonicParsing="false" onAction="#addCategoryClicked" prefWidth="200.0" text="Add Category" HBox.hgrow="ALWAYS" />
+            <Button fx:id="editCategoryButton" layoutX="10.0" layoutY="10.0" maxHeight="100.0" maxWidth="500.0" mnemonicParsing="false" onAction="#editCategoryClicked" prefWidth="200.0" text="Edit Category" HBox.hgrow="ALWAYS" />
+         </children>
+      </HBox>
+      <VBox prefHeight="555.0" prefWidth="100.0">
+         <children>
+            <HBox minHeight="40.0" prefHeight="50.0" prefWidth="800.0">
+               <children>
+                  <Label minWidth="150.0" text="Choose Application">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="15.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Region prefHeight="35.0" prefWidth="35.0" HBox.hgrow="ALWAYS" />
+                  <ChoiceBox id="appChoiceBox" fx:id="choiceBoxId" prefWidth="800.0">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </ChoiceBox>
+               </children>
+            </HBox>
+            <Label text="Category's name">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="nameId" prefHeight="45.0" promptText="Please write the name of the category here ...">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" />
+               </VBox.margin>
+            </TextField>
+            <Label text="Description of category">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" />
+               </VBox.margin>
+            </Label>
+            <TextArea fx:id="descriptionId" prefHeight="400.0" prefWidth="200.0" promptText="Please write your description here ...">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" />
+               </VBox.margin>
+            </TextArea>
+            <HBox prefHeight="30.0" prefWidth="200.0">
+               <children>
+                  <Region maxWidth="800.0" prefHeight="200.0" prefWidth="600.0" HBox.hgrow="ALWAYS" />
+                  <Button fx:id="confirmButton" minWidth="100.0" mnemonicParsing="false" onAction="#confirmButtonPressed" prefHeight="30.0" prefWidth="100.0" text="Confirm">
+                     <HBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</VBox>

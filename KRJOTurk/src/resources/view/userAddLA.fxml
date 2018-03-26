@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.userAddLa">
+   <children>
+      <VBox prefWidth="100.0">
+         <children>
+            <Label text="Application's name">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="nameId" prefHeight="45.0" promptText="Please write the name of the application here ...">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" />
+               </VBox.margin>
+            </TextField>
+            <Label text="Description of application">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" />
+               </VBox.margin>
+            </Label>
+            <TextArea fx:id="descriptionId" prefHeight="400.0" prefWidth="200.0" promptText="Please write your description here ...">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" />
+               </VBox.margin>
+            </TextArea>
+            <HBox prefHeight="30.0" prefWidth="200.0">
+               <children>
+                  <Region maxWidth="800.0" prefHeight="200.0" prefWidth="600.0" HBox.hgrow="ALWAYS" />
+                  <Button fx:id="confirmButton" minWidth="100.0" mnemonicParsing="false" onAction="#confirmButtonPressed" prefHeight="30.0" prefWidth="100.0" text="Confirm">
+                     <HBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+      <HBox alignment="CENTER" maxHeight="40.0" minHeight="40.0" prefHeight="40.0" style="-fx-border-width: 1 0 0 0; -fx-border-color: grey; -fx-background-color: #f2f2f2;">
+         <children>
+            <Label fx:id="messageLabel" maxHeight="40.0" HBox.hgrow="ALWAYS">
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets right="5.0" />
+               </HBox.margin>
+            </Label>
+            <Region HBox.hgrow="ALWAYS" />
+         </children>
+      </HBox>
+   </children>
+</VBox>
