@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.HomeController">
+   <children>
+      <VBox layoutX="162.0" layoutY="55.0" prefHeight="600.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox prefHeight="47.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="homeButton" mnemonicParsing="false" prefWidth="100.0" text="Home">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Region prefHeight="200.0" prefWidth="50.0" HBox.hgrow="ALWAYS" />
+                  <Button fx:id="adminPanelButton" mnemonicParsing="false" onAction="#adminPanelButtonClicked" prefWidth="100.0" text="Admin Panel">
+                     <HBox.margin>
+                        <Insets bottom="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="examPanelButton" mnemonicParsing="false" onAction="#examPanelButtonClicked" prefWidth="100.0" text="Exam panel">
+                     <HBox.margin>
+                        <Insets right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="myContentButton" mnemonicParsing="false" onAction="#myContentButtonClick" prefWidth="100.0" text="My Content">
+                     <HBox.margin>
+                        <Insets bottom="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="createButton" mnemonicParsing="false" onAction="#createButtonClick" prefWidth="100.0" text="Create">
+                     <HBox.margin>
+                        <Insets bottom="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="settingsButton" mnemonicParsing="false" onAction="#settingsButtonClick" prefWidth="100.0" text="Settings">
+                     <HBox.margin>
+                        <Insets bottom="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <SplitPane dividerPositions="0.29797979797979796" prefHeight="160.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                     <children>
+                        <TreeView fx:id="homeTree" layoutX="-8.0" layoutY="25.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                     </children>
+                  </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                     <children>
+                        <VBox layoutX="156.0" layoutY="99.0" prefHeight="504.0" prefWidth="556.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <TextField fx:id="searchTextField" onAction="#searchOnAction" prefHeight="27.0" prefWidth="198.0" promptText="Search" HBox.hgrow="ALWAYS">
+                                       <HBox.margin>
+                                          <Insets left="25.0" right="5.0" />
+                                       </HBox.margin>
+                                    </TextField>
+                                    <ChoiceBox fx:id="searchChoiceBox" prefWidth="170.0" HBox.hgrow="ALWAYS">
+                                       <HBox.margin>
+                                          <Insets left="5.0" right="25.0" />
+                                       </HBox.margin>
+                                    </ChoiceBox>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
+                                 </padding>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <ListView fx:id="searchListView" prefHeight="252.0" prefWidth="556.0" VBox.vgrow="ALWAYS">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" />
+                                 </VBox.margin></ListView>
+                           </children>
+                        </VBox>
+                     </children></AnchorPane>
+              </items>
+            </SplitPane>
+            <HBox maxHeight="47.0" prefHeight="47.0" prefWidth="200.0">
+               <children>
+                  <Label fx:id="statementLabel" maxHeight="56.0" prefHeight="47.0" text="Some text here" HBox.hgrow="ALWAYS">
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </Label>
+                  <Region prefHeight="200.0" HBox.hgrow="ALWAYS" />
+                  <Button fx:id="logOutButton" mnemonicParsing="false" onAction="#logOutButtonClicked" prefHeight="25.0" prefWidth="100.0" text="Log Out" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

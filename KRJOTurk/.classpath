@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="C:/Users/krems/Dropbox/KRJOTurk_libs/commons-validator-1.6.jar"/>
+	<classpathentry kind="lib" path="C:/Users/krems/Dropbox/KRJOTurk_libs/gson-2.8.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/krems/Dropbox/KRJOTurk_libs/javax.ws.rs.jar"/>
+	<classpathentry kind="lib" path="C:/Users/krems/Dropbox/KRJOTurk_libs/jersey-bundle-1.13-b01.jar"/>
+	<classpathentry kind="lib" path="C:/Users/krems/Dropbox/KRJOTurk_libs/jersey-client-1.19.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/krems/Dropbox/KRJOTurk_libs/jersey-core-1.19.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/krems/Dropbox/KRJOTurk_libs/junit-4.10.jar"/>
+	<classpathentry kind="lib" path="C:/Users/krems/Dropbox/KRJOTurk_libs/mysql-connector-java-5.1.44-bin.jar"/>
+	<classpathentry kind="lib" path="C:/Users/krems/Dropbox/KRJOTurk_libs/controlsfx-8.40.14/controlsfx-8.40.14.jar"/>
+	<classpathentry kind="lib" path="C:/Users/krems/Dropbox/KRJOTurk_libs/controlsfx-8.40.14/controlsfx-samples-8.40.14.jar"/>
+	<classpathentry kind="lib" path="C:/Users/krems/Dropbox/KRJOTurk_libs/controlsfx-8.40.14/fxsampler-1.0.10.jar"/>
+	<classpathentry kind="con" path="org.eclipse.fx.ide.jdt.core.JAVAFX_CONTAINER"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/TCPCommunication"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

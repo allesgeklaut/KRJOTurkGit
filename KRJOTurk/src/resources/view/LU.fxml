@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.LUController">
+   <children>
+      <VBox layoutX="162.0" layoutY="55.0" prefHeight="600.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox prefHeight="47.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="homeButton" mnemonicParsing="false" onAction="#homeButtonClick" prefWidth="100.0" text="Home">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Region prefHeight="200.0" prefWidth="50.0" HBox.hgrow="ALWAYS" />
+                  <Button fx:id="adminPanelButton" mnemonicParsing="false" onAction="#adminPanelButtonClicked" prefWidth="100.0" text="Admin Panel">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="examPanelButton" mnemonicParsing="false" onAction="#examPanelButtonClicked" prefWidth="100.0" text="Exam panel">
+                     <HBox.margin>
+                        <Insets right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" prefWidth="100.0" text="My Content">
+                     <HBox.margin>
+                        <Insets bottom="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="createButton" mnemonicParsing="false" onAction="#createButtonClick" prefWidth="100.0" text="Create">
+                     <HBox.margin>
+                        <Insets bottom="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="settingsButton" mnemonicParsing="false" onAction="#settingsButtonClick" prefWidth="100.0" text="Settings">
+                     <HBox.margin>
+                        <Insets bottom="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <SplitPane dividerPositions="0.29797979797979796" prefHeight="160.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                     <children>
+                        <TreeView fx:id="settingsTree" layoutX="-8.0" layoutY="25.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                     </children>
+                  </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                     <children>
+                        <VBox style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <VBox alignment="CENTER" prefHeight="49.0" prefWidth="556.0">
+                                 <children>
+                                    <Text fx:id="title" strokeType="OUTSIDE" strokeWidth="0.0" text="LU Title Placeholder" textAlignment="CENTER">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                    </Text>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER" prefHeight="49.0" prefWidth="556.0">
+                                 <children>
+                                    <Text fx:id="question" strokeType="OUTSIDE" strokeWidth="0.0" text="Question" textAlignment="CENTER">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                    </Text>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </VBox>
+                              <VBox alignment="CENTER" prefHeight="49.0" prefWidth="556.0" />
+                              <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <Pane prefHeight="200.0" prefWidth="200.0">
+                                       <children>
+                                          <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="124.0" layoutX="28.0" stroke="BLACK" strokeType="INSIDE" width="167.0" />
+                                          <Line endX="80.0" layoutX="112.0" layoutY="46.0" startX="-83.0" />
+                                          <Text fx:id="object1" layoutX="38.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                                          <Text fx:id="object1_parameters" layoutX="38.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                                       </children>
+                                    </Pane>
+                                    <Pane prefHeight="200.0" prefWidth="200.0">
+                                       <children>
+                                          <Line endX="100.0" layoutX="100.0" layoutY="62.0" startX="-100.0" />
+                                          <Text fx:id="object1_num" layoutX="14.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                                          <Text fx:id="relationship" layoutX="86.0" layoutY="91.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                                          <Text fx:id="object2_num" layoutX="158.0" layoutY="57.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                                       </children>
+                                    </Pane>
+                                    <Pane minHeight="-Infinity" minWidth="-Infinity" prefHeight="124.0" prefWidth="167.0">
+                                       <children>
+                                          <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="124.0" stroke="BLACK" strokeType="INSIDE" width="167.0" />
+                                          <Line endX="80.0" layoutX="85.0" layoutY="50.0" startX="-83.0" />
+                                          <Text fx:id="object2_parameters" layoutX="14.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                                          <Text fx:id="object2" layoutX="14.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                                       </children>
+                                    </Pane>
+                                 </children>
+                                 <padding>
+                                    <Insets left="-30.0" />
+                                 </padding>
+                              </HBox>
+                              <VBox alignment="CENTER" prefHeight="49.0" prefWidth="556.0" />
+                              <VBox alignment="CENTER" prefHeight="49.0" prefWidth="556.0">
+                                 <children>
+                                    <Pane prefHeight="200.0" prefWidth="200.0">
+                                       <children>
+                                          <Text layoutX="43.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                                          <CheckBox layoutX="488.0" layoutY="14.0" mnemonicParsing="false" />
+                                       </children>
+                                    </Pane>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER" prefHeight="49.0" prefWidth="556.0">
+                                 <children>
+                                    <Pane prefHeight="200.0" prefWidth="200.0">
+                                       <children>
+                                          <Text layoutX="43.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                                          <CheckBox layoutX="488.0" layoutY="14.0" mnemonicParsing="false" />
+                                       </children>
+                                    </Pane>
+                                 </children>
+                              </VBox>
+                              <VBox alignment="CENTER" prefHeight="49.0" prefWidth="556.0">
+                                 <children>
+                                    <Pane prefHeight="200.0" prefWidth="200.0">
+                                       <children>
+                                          <Text layoutX="43.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                                          <CheckBox layoutX="488.0" layoutY="14.0" mnemonicParsing="false" />
+                                       </children>
+                                    </Pane>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </VBox>
+                     </children></AnchorPane>
+              </items>
+            </SplitPane>
+            <HBox maxHeight="47.0" prefHeight="47.0" prefWidth="200.0">
+               <children>
+                  <Label fx:id="statementLabel" maxHeight="56.0" prefHeight="47.0" prefWidth="204.0" text="Some text here" HBox.hgrow="ALWAYS">
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </Label>
+                  <Region prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+                  <Button fx:id="logOutButton" mnemonicParsing="false" onAction="#logOutButtonClicked" prefHeight="25.0" prefWidth="100.0" text="Log Out" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

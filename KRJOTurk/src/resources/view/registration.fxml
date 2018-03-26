@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import org.controlsfx.control.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="400.0" minWidth="600.0" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.RegistrationController">
+   <children>
+      <VBox prefHeight="600.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox prefHeight="35.0" prefWidth="800.0">
+               <children>
+                  <Label layoutX="97.0" layoutY="48.0" prefHeight="30.0" prefWidth="317.0" text="Registration Form" AnchorPane.leftAnchor="10.0" AnchorPane.topAnchor="10.0" HBox.hgrow="ALWAYS">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" top="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <SplitPane dividerPositions="0.3609022556390977" prefHeight="511.0" prefWidth="800.0" VBox.vgrow="ALWAYS">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="495.0" prefWidth="337.0">
+                     <children>
+                        <VBox prefHeight="495.0" prefWidth="284.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Label alignment="TOP_LEFT" text="Personal Information">
+                                 <font>
+                                    <Font size="22.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" top="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <VBox alignment="TOP_CENTER" layoutX="14.0" layoutY="55.0" prefHeight="495.0" prefWidth="284.0" spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <TextField fx:id="nameTextField" layoutX="14.0" layoutY="55.0" prefHeight="29.0" promptText="Name*" VBox.vgrow="NEVER" />
+                                    <TextField fx:id="surnameTextField" layoutX="14.0" layoutY="94.0" prefHeight="29.0" promptText="Surname*" VBox.vgrow="NEVER" />
+                                    <TextField fx:id="username" prefHeight="29.0" promptText="Username*" VBox.vgrow="NEVER" />
+                                    <DatePicker fx:id="dateOfBirthField" layoutX="14.0" layoutY="180.0" prefHeight="29.0" prefWidth="1151.0" promptText="Date of Birth" VBox.vgrow="NEVER" />
+                                    <TextField fx:id="emailTextField" layoutX="14.0" layoutY="138.0" prefHeight="29.0" promptText="E-mail*" VBox.vgrow="NEVER">
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin></TextField>
+                                    <PasswordField fx:id="passwordField" layoutX="14.0" layoutY="221.0" prefHeight="29.0" promptText="Password*" VBox.vgrow="NEVER" />
+                                    <PasswordField fx:id="confirmPasswordField" layoutX="14.0" layoutY="265.0" prefHeight="29.0" promptText="Confirm Password*" VBox.vgrow="NEVER" />
+                                    <ChoiceBox fx:id="genderField" prefHeight="35.0" prefWidth="272.0" />
+                                    <ScrollPane VBox.vgrow="ALWAYS">
+                                       <content>
+                                       <TextFlow fx:id="errorLogTextFlow" lineSpacing="5.0" prefHeight="96.0" prefWidth="244.0" VBox.vgrow="ALWAYS">
+                                          <VBox.margin>
+                                             <Insets />
+                                          </VBox.margin>
+                                          <padding>
+                                             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                          </padding>
+                                          </TextFlow>
+                                       </content>
+                                    </ScrollPane>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                              </VBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="545.0" prefWidth="587.0">
+                     <children>
+                        <VBox prefHeight="561.0" prefWidth="505.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Label text="Do you want to be a creator?">
+                                 <font>
+                                    <Font size="22.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" top="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                              <HBox layoutX="73.0" layoutY="103.0" prefHeight="584.0" prefWidth="505.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <TextFlow fx:id="creatorText" prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+                                       <HBox.margin>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </HBox.margin>
+                                    </TextFlow>
+                                 </children>
+                              </HBox>
+                              <CheckBox fx:id="creatorCheckBox" mnemonicParsing="false" text="I want to be a creator" visible="false">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" left="10.0" />
+                                 </VBox.margin>
+                              </CheckBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+              </items>
+            </SplitPane>
+            <HBox alignment="BOTTOM_CENTER" fillHeight="false" maxHeight="51.0" prefHeight="51.0" prefWidth="800.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <Button fx:id="goBackButton" mnemonicParsing="false" onAction="#goBackButtonPressed" prefHeight="27.0" prefWidth="100.0" text="Back">
+                     <HBox.margin>
+                        <Insets bottom="10.0" left="10.0" top="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                  </Button>
+                  <Region prefHeight="35.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+                  <Button fx:id="confirmButton" mnemonicParsing="false" onAction="#confirmButtonPressed" prefHeight="27.0" prefWidth="100.0" text="Confirm">
+                     <font>
+                        <Font size="12.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets bottom="10.0" right="10.0" top="10.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
