@@ -4,3 +4,5 @@ KRJOTurk/run/
 DBServer/\.project
 
 DBServer/\.pydevproject
+
+DBServer/TCPServer/__pycache__/
