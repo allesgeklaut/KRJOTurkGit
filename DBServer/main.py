@@ -3,8 +3,9 @@ Created on 29.03.2018
 
 @author: krems
 '''
-import TCPServer.TCPServer as TCPSrv
+from ServerApp.ServerApp import srv
+import asyncore
 
-port = 5005
-srv = TCPSrv.TCPServer(port)
-srv.open()
+server = srv(8080)
+asyncore.loop()
+

@@ -6,3 +6,7 @@ DBServer/\.project
 DBServer/\.pydevproject
 
 DBServer/TCPServer/__pycache__/
+
+DBServer/ServerApp/__pycache__/
+
+DBServer/DBConnector/__pycache__/
