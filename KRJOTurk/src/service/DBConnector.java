@@ -13,9 +13,9 @@ import com.mysql.fabric.jdbc.FabricMySQLDriver;
 public class DBConnector {
 
 	// local database data (currently running on pi)
-	private static final String URL = "jdbc:mysql://localhost:4321/OADTurk?autoReconnect=true&useSSL=false";
-	private static final String USERNAME = "superUser";
-	private static final String PASSWORD = "MC_1919";
+	private static final String URL = "jdbc:mysql://localhost:3306/OADTurk?autoReconnect=true&useSSL=false";
+	private static final String USERNAME = "root";
+	private static final String PASSWORD = "root";
 
 	/**
 	 * connects to the remote server over ssh at port 22
@@ -78,7 +78,7 @@ public class DBConnector {
 	}
 
 	public void connectToDB() {
-		connectSSH("pi@192.168.8.107", "4321:localhost:3306");
+		// connectSSH("pi@192.168.8.107", "4321:localhost:3306");
 		connect(URL, USERNAME, PASSWORD);
 
 	}
