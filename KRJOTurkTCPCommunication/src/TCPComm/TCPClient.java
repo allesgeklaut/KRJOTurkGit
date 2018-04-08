@@ -21,15 +21,46 @@ import java.util.Arrays;
 import javax.imageio.ImageIO;
 
 public class TCPClient {
+
+	Socket m_socket;
+
+	public void open(String ip, int port) {
+		try {
+			m_socket = new Socket(ip, port);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
+	public byte[] sendData(byte[] dataIn) {
+		try {
+			DataInputStream input = new DataInputStream(m_socket.getInputStream());
+			DataOutputStream output = new DataOutputStream(m_socket.getOutputStream());
+			output.write(dataIn);
+			output.flush();
+
+			int nb = input.readInt();
+			byte[] digit = new byte[nb];
+			for (int i = 0; i < nb; i++)
+				digit[i] = input.readByte();
+
+			return digit;
+		} catch (IOException e) {
+			e.printStackTrace();
+			return null;
+		}
+
+	}
+
 	public static void main(String args[]) {// arguments supply message and hostname of destination
 		Socket s = null;
 		try {
 			int serverPort = 8080;
 			String ip = "localhost";
-			int CID = 2;
-			// String SQLCommand = "SELECT * FROM users";
+			int CID = 0;
+			String SQLCommand = "SELECT * FROM users";
 			// String data = "0001" + "UPDATE users SET `email`='asd' WHERE user_id=11";
-			String SQLCommand = "image01";
+			// String SQLCommand = "image01";
 
 			// Bild
 			BufferedImage image = ImageIO.read(new File("C:\\Users\\krems\\Pictures\\meli.jpg"));

@@ -9,10 +9,22 @@ import com.jcraft.jsch.JSch;
 import com.jcraft.jsch.Session;
 import com.mysql.fabric.jdbc.FabricMySQLDriver;
 
-//Connect remote MySQL Database to the program through ssh
+import TCPComm.TCPClient;
+
+enum commandID {
+	getData, setData, uploadImage, downloadImage;
+}
+
+// Connect remote MySQL Database to the program through ssh
 public class DBConnector {
 
-	// local database data (currently running on pi)
+	private Connection m_connection;
+	private TCPClient m_TCPClientInstance;
+
+	public DBConnector() {
+	}
+
+	// local database data
 	private static final String URL = "jdbc:mysql://localhost:3306/OADTurk?autoReconnect=true&useSSL=false";
 	private static final String USERNAME = "root";
 	private static final String PASSWORD = "root";
@@ -64,32 +76,31 @@ public class DBConnector {
 		}
 	}
 
-	private Connection connection;
-
 	public Connection getConnection() {
-		return connection;
+		return m_connection;
 	}
 
 	public void setConnection(Connection connection) {
-		this.connection = connection;
-	}
-
-	public DBConnector() {
-	}
-
-	public void connectToDB() {
-		// connectSSH("pi@192.168.8.107", "4321:localhost:3306");
-		connect(URL, USERNAME, PASSWORD);
-
+		this.m_connection = connection;
 	}
 
 	public void connect(String url, String username, String password) {
 		try {
 			Driver driver = new FabricMySQLDriver();
 			DriverManager.registerDriver(driver);
-			connection = DriverManager.getConnection(url, username, password);
+			m_connection = DriverManager.getConnection(url, username, password);
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
 	}
+
+	public void connectToDB() {
+		// connectSSH("pi@192.168.8.107", "4321:localhost:3306");
+		// connect(URL, USERNAME, PASSWORD);
+
+		m_TCPClientInstance = new TCPClient();
+		m_TCPClientInstance.open("localhost", 8080);
+
+	}
+
 }
